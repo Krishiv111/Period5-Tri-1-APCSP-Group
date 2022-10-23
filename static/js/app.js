@@ -16,10 +16,10 @@ function calculateBMI() {
 	let result = document.querySelector("#result");
     // Insures that height and weight input is valid: No Letters
 	if (height === "" || isNaN(height))
-		result.innerHTML = "Provide a valid Height!";
+		result.innerHTML = 'Provide a valid Height!:  <span style="font-style:italic;"> Proporcione una Altura Válida!"</span>';
 
 	else if (weight === "" || isNaN(weight))
-		result.innerHTML = "Provide a valid Weight!";
+		result.innerHTML = 'Provide a valid Weight!: <span style="font-style:italic;">Proporcione una Peso Válida!"</span>';
 
 	else {
     //Calculates BMI upto 2 Decimals Spaces
@@ -27,14 +27,14 @@ function calculateBMI() {
 							/ 10000)).toFixed(2);
         // Based off Results: Classified as Underweight, Overweight, or Normal
 		if (bmi < 18.6) result.innerHTML =
-			`Under Weight; Bajo Peso : <span>${bmi}</span>`;
+			`Under Weight: <span style="font-style:italic;"> Bajo Peso </span> : <span>${bmi}</span>`;
 
 		else if (bmi >= 18.6 && bmi < 24.9)
 			result.innerHTML =
-				`Normal: Normal : <span>${bmi}</span>`;
+				`Normal: <span style="font-style:italic;"> Normal </span> : <span>${bmi}</span>`;
 
 		else result.innerHTML =
-			`Over Weight : Exceso de Peso : <span>${bmi}</span>`;
+			`Over Weight : <span style="font-style:italic;"> Exceso de Peso </span>: <span>${bmi}</span>`;
 	}
 }
 
