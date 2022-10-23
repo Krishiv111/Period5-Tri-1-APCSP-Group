@@ -27,14 +27,14 @@ function calculateBMI() {
 							/ 10000)).toFixed(2);
         // Based off Results: Classified as Underweight, Overweight, or Normal
 		if (bmi < 18.6) result.innerHTML =
-			`Under Weight : <span>${bmi}</span>`;
+			`Under Weight; Bajo Peso : <span>${bmi}</span>`;
 
 		else if (bmi >= 18.6 && bmi < 24.9)
 			result.innerHTML =
-				`Normal : <span>${bmi}</span>`;
+				`Normal: Normal : <span>${bmi}</span>`;
 
 		else result.innerHTML =
-			`Over Weight : <span>${bmi}</span>`;
+			`Over Weight : Exceso de Peso : <span>${bmi}</span>`;
 	}
 }
 
