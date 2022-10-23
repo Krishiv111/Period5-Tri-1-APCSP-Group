@@ -21,6 +21,10 @@ def index():
 def stub():
     return render_template("About-Us.html")
 
+
+@app.route('/bmi/')  # connects /bmi/ URL to bmi() function
+def bmi():
+    return render_template("bmi.html")
 # this runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
