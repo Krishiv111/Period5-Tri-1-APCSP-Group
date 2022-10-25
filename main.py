@@ -25,6 +25,11 @@ def stub():
 @app.route('/bmi/')  # connects /bmi/ URL to bmi() function
 def bmi():
     return render_template("bmi.html")
+
+@app.route('/calorie/')  # connects /stub/ URL to stub() function
+def calorie():
+    return render_template("calorie.html")
+
 # this runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
