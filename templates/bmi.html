@@ -8,36 +8,22 @@
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
     <!- Try building a new body here, bootstrap is a wise choice ->
-    <div class="px-5 py-5 mx-auto">
-        <h1 class="text-primary"><strong>BMI Calculator : Calculadora de BMI</strong></h1>
-        <p class="text-secondary">
-
-            <!DOCTYPE html>
-            <html>
-            <head>
-                <script type="text/javascript" src="../static/js/app.js">
-                </script>   
-
-            </head>
-            <body>
-                <div class="container">
-              
-                    <p>Height : <span style="font-style:italic;">Altura</span> (In CM): </p>
-                    
-                    <input type="text" id="height">
-              
-                    <p>Weight : <span style="font-style:italic;">Peso</span> (In KG)</p>
-              
-                    <input type="text" id="weight">
-              
-                    <button id="btn">Calculate : <span style="font-style:italic;">Calcular</span></button>
-
-                    <div id="result"></div>
-                    
-                </div>
-            </body>
-              
-            </html>
+        </head>
+        <body>
+            <div class="calculator-container">
+                <div class="px-5 py-5 mx-auto">
+                    <h1 class="text-primary"><strong>BMI Calculator : Calculadora de BMI</strong></h1>
+                <p>Height : <span style="font-style:italic;">Altura</span> (INCHES):</p>
+                <input class="height-input-field" type="text">
+                <p>Weight: <span style="font-style:italic;">Peso</span> (POUNDS): </p>
+                <input class="weight-input-field" type="text"><br>
+                <button class="calculate"> Calculate : <span style="font-style:italic;">Calcular</span></button>
+            </div>
+                <h3 class="result"></h3>
+                <p class="result-statement"></p>
+            <script type="text/javascript" src="../static/js/app.js"></script>
+        </body>
+        </html>
             
             
        
