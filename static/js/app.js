@@ -1,14 +1,16 @@
-var heightInput = document.querySelector(".height-input-field");
-var weightInput = document.querySelector(".weight-input-field");
+
+var height = document.querySelector(".height-input-field");
+    var weight = document.querySelector(".weight-input-field");
 var calculateButton = document.querySelector(".calculate");
-var result = document.querySelector(".result");
+    var result = document.querySelector(".result");
 var statement = document.querySelector(".result-statement");
-var BMI, height, weight;
+
+    var BMI, height, weight;
 
 calculateButton.addEventListener("click", ()=>{
 
-    height = heightInput.value;
-    weight = weightInput.value;
+    height = height.value;
+    weight = weight.value;
     BMI = weight*700/(height*height); 
     result.innerText = BMI;
 
