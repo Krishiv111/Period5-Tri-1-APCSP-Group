@@ -9,8 +9,13 @@
     <!- Try building a new body here, bootstrap is a wise choice ->
     <div class="px-5 py-5 mx-auto">
         <h1 class="text-primary"><strong>Calorie Calculator</strong></h1>
-        <p class="text-secondary">What is your Calorie Goal for today?
-
+        <p>What is your Calorie Goal for Today? : <input class="height-input-field" type="text">
+            <form action="welcome.php" method="post">
+                Name: <input type="text" name="name"><br>
+                E-mail: <input type="text" name="email"><br>
+                <input type="submit">
+                </form>
+        
 {% endblock %}
 
 <!- This is turning off birds background from base.html -->
