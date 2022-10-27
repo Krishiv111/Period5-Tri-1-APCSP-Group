@@ -9,3 +9,4 @@ if calories >= goal:
     print("Congrats You have achieved your goal!")
 else:
     print("You have not achieved your goal")
+    print("Complete")
