@@ -12,7 +12,7 @@ calculateButton.addEventListener("click", ()=>{
     height = height.value;
     weight = weight.value;
     BMI = weight*700/(height*height); 
-    result.innerText = BMI;
+    result.innerText = BMI.toFixed(1);
 
     if(BMI < 18.5){
         statement.innerText = "Underweight: Baja Peso";    

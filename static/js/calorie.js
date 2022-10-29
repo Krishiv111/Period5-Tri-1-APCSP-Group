@@ -1,7 +1,7 @@
-var calorie = document.querySelector(".calorie-goal-input-field")
-    var cont = document.querySelector(".cont-input-field")
+var goal = prompt("What is your Calorie Goal for today?");
+    var count = document.querySelector(".count-input-field")
 var calculateButton = document.querySelector(".calculate");
-    var re = document.querySelector(".result");
+    var result = document.querySelector(".result");
 var statement = document.querySelector(".result-statement");
 
 while add == "yes":
