@@ -7,41 +7,24 @@
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
     <!- Try building a new body here, bootstrap is a wise choice ->
+    <body style="background-color: rgb(207, 197, 186);"
+    
     <div class="px-5 py-5 mx-auto">
-        <h1 class="text-primary"><strong>Project</strong></h1>
-        <p class="text-secondary">				Project 1 Ideas
-
-            MAIN APP: Fitness Based Log
-            
-            <ul style=“list-style-type:square”>
-
-                <li>An App To Show A person's fitness journey and overall progress toward there goals</li>
-                
-                <li> Elements  </li>
-                
-                <li>For people to log their fitness goals and progress</li>
-                <li> Max Heart Rate</li>
-                <li>Calorie counter</li>
-                <li>BMI calculator</li>
-                <li>Plan for future goals </li>
-                <li>Dietary Advice </li>
-                <li>Resources for fitness</li>
-                <li>Fitness Quiz </li>
-                <li>Water Log 
-                
-              </li>
-                </ul>
-
-                <div class="px-5 py-5 mx-auto">
-                    <h1 class="text-primary"><strong>About Us</strong></h1>
-                    <p class="text-secondary">	Group Members: Druhva Loves Weightlifiting, Krishiv loves soccer, Prasith loves basketball, Shivansh Loves Football, Advay Loves Water Polo. </li>
-            <p>
-            Purpose
-            The purpose we will use in our app will be able to give an output through a person input, using arrays, lists, if else and other elements of code.
-            </p>
-            <img class="card-img-top" src="{{ url_for('static', filename='assets/bmi-updated.png') }}" alt="Flask Development" height="250">
-
-    </div>
+        <h1 class="text-black"><strong>ABOUT US!</strong></h1>
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                   
+                    <div class="card-body">
+                    <h5 class="card-title">Krishiv</h5>
+                    <p class="card-text">
+                       Hello My Name is Krishiv and I am the scrum master for this project. My favorite thing to do that keeps me fit is playing soccer and running. My Role in this project was to help keep everything organized by creating scrum boards and assigning tasks, in addition I helped with creating the logo,homepage,and the about us which is what your are reading now.
+                    </p>
+                  
+             </div>
+   
+                                  
+                                    
 {% endblock %}
 
 <!- This is turning off birds background from base.html -->
