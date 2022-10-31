@@ -3,25 +3,16 @@
 
 {% block body %}
     <!-- Start of body content specific to page -->
-    <body>
+    <body background= "{{ url_for('static', filename='assets/biggu.jpg') }}">
+    
        
     
-    <div class="px-5 py-5 mx-auto">
-        <h1 style="position:relative; left:500px;" class="text-white"><strong>Fitness Forever</strong></h1>
-        <div class="row">
-            <div class="col-4">
-                <div class="card">
-                    <img class="card-img-top" src="{{ url_for('static', filename='assets/fitness1.jpg') }}" alt="Fitness" height="200">
-                    <div class="card-body">
-                    <h5 class="card-title"> What is Fitness Forever?</h5>
-                    <p class="card-text">
-                    Fitness Forever is a Service Created by students from Del Norte High School. Our goal is to make an app that helps people achieve their fitness goals while making sure they are able to keep track of them at the same time. We have worked very hard to develop this, some of the elements are a BMI calculator,fitness quiz,and a goals chart. Although fitness can seem an easy thing to work for it really it mentally challenging as there can be many setbacks and failures along the way, this is why we have created a motivation center for our users to keep them motivated all throughout their journey.
-                    </p>
-
-                    </div>
-                </div>
+     <div class="px-5 py-5 mx-auto">
+        <h1 style="position:relative; left:500px; top:200px;" class="text-white" ><strong>Fitness Forever</strong></h1>
+        <button type="button" style="position:relative; left:600px; top:200px;">About Us</button>
+        
                 
-                <img background-img: src="{{ url_for('static', filename='assets/yesfit2.jpg') }}" alt="Homepage Fit" height= "600" width="800" style="position:relative; left:455px; top:-600px ">
+               
               
             </body>
 {% endblock %}
