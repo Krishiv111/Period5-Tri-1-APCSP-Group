@@ -30,6 +30,10 @@ def bmi():
 def calorie():
     return render_template("calorie.html")
 
+@app.route('/fitnessgoals/')  # connects /stub/ URL to stub() function
+def fitnessgoals():
+    return render_template("fitnessgoals.html")
+
 # this runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
