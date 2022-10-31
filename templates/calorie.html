@@ -17,14 +17,24 @@
         <input type="text" id="goal">
         <br>        
         <button type="submit" onclick="myfunc()" id="test">click me</button>
-
+    </html>
         <script type="text/javascript">
             function myfunc() {
                 var goal = document.getElementById('goal').value;
-                document.write("Your Goal for Today: " + goal + " Calories");
 
+                document.write("Progress on Calorie Goal: / " + goal + " Calories" + "<br>");
+                document.write("Add Calories:" + "<br>");
+                var new = document.createElement("new");
+                input.setAttribute("type", "text");
+                document.body.appendChild(new);
+                document.write("Ur new is " + new)
+                let btn = document.createElement("button");
+                btn.innerHTML = "Add";
+                document.body.appendChild(btn);
             }
         </script>
+
+    
         
 {% endblock %}
 
