@@ -35,7 +35,7 @@ def fitnessgoals():
     return render_template("fitnessgoals.html")
 
 @app.route('/motivation/')  # connects /stub/ URL to stub() function
-def fitnessgoals():
+def motivation():
     return render_template("motivation.html")
 
 # this runs the application on the development server
