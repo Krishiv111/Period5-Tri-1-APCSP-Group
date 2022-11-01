@@ -11,6 +11,7 @@
         <h1 class="text-primary"><strong>Fitness Goals</strong></h1>
         
         <html>
+        <body>
             <label for="weight">What is your current weight(lb)</label>
             <br>
             <input type="text" id="weight">
@@ -23,19 +24,37 @@
             <br>
             <input type="text" id="change"> 
             <br>
-            <button type="submit" onclick="check()" id="check">Submit</button>
-        </html>
+            <button type="submit" onclick="myfunc()" id="check">Submit</button>
+            
             <script type="text/javascript">
-                String change = document.getElementById('change').value;
-                document.write(change)
-                function check() {
-                    document.write(change)
-
-                 
                 
-                }
-            </script>
+            function myfunc() {
         
+                var change = document.getElementById('change').value;
+                
+                if (change == "gain") {
+                    document.write("Tips for Gaining Weight: ".fontsize(50) + "<br>")
+                    document.write("-".fontsize(6) + "Eat More Frequently".fontsize(6) + "<br>")
+                    document.write("-".fontsize(6) + "Choose nutrient-rich foods".fontsize(6) + "<br>")
+                    document.write("-".fontsize(6) + "Try smoothies and shakes".fontsize(6) + "<br>")
+                    document.write("-".fontsize(6) + "Watch when you drink".fontsize(6) + "<br>")
+                    document.write("-".fontsize(6) + "Make every bite count".fontsize(6) + "<br>")
+                    document.write("-".fontsize(6) + "Exercise".fontsize(6) + "<br>")
+                } else if (change == "lose") {
+                    document.write("Tips for Losing Weight: ".fontsize(50) + "<br>")
+                    document.write("-".fontsize(6) + "Eat Regular Meals".fontsize(6) + "<br>")
+                    document.write("-".fontsize(6) + "Get More Active".fontsize(6) + "<br>")
+                    document.write("-".fontsize(6) + "Drink plenty of water".fontsize(6) + "<br>")
+                    document.write("-".fontsize(6) + "Eat high fibre foods".fontsize(6) + "<br>")
+                    document.write("-".fontsize(6) + "Do not stock junk food".fontsize(6) + "<br>")
+                    document.write("-".fontsize(6) + "Plan your meals".fontsize(6) + "<br>")
+                } else {
+                    document.write("There is an Error Please re-enter your answers")
+                }
+            }
+        </script>
+        </body>
+        </html>
 
 {% endblock %}
 
