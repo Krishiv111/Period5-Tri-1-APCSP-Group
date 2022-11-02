@@ -7,24 +7,24 @@
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
     <!- Try building a new body here, bootstrap is a wise choice ->
+    
     <div class="px-5 py-5 mx-auto">
         <h1 class="text-primary"><strong>Fitness Goals</strong></h1>
-        
+        <p> <img src="../static/assets/fitnessgoals.webp" alt="fitnessgoals" style="float:right;width:700px;height:500px;"></p>
         <html>
         <body>
-            <label for="weight">What is your current weight(lb)</label>
+
+            <label for="Name">What is your Name?</label> </label> <input type="text" id="name">
             <br>
-            <input type="text" id="weight">
+            <br>
+            <h for="weight">What is your current weight(lb)? </h><input type="text" id="weight">
             <br> 
-            <label for="height">What is your current Height(in)</label>
             <br>
-            <input type="text" id="height"> 
+            <label for="height">What is your current Height(in)? </label> <input type="text" id="height"> 
             <br>
-            <label for="change">Do you want to gain or lose weight</label>
             <br>
-            <input type="text" id="change"> 
-            <br>
-            <button type="submit" onclick="myfunc()" id="check">Submit</button>
+            <label for="change">Do you want to gain or lose weight? </label> <input type="text" id="change"> 
+        <button type="submit" onclick="myfunc()" id="check">Submit</button>
             
             <script type="text/javascript">
                 
@@ -48,6 +48,7 @@
                     document.write("-".fontsize(6) + "Eat high fibre foods".fontsize(6) + "<br>")
                     document.write("-".fontsize(6) + "Do not stock junk food".fontsize(6) + "<br>")
                     document.write("-".fontsize(6) + "Plan your meals".fontsize(6) + "<br>")
+
                 } else {
                     document.write("There is an Error Please re-enter your answers")
                 }
