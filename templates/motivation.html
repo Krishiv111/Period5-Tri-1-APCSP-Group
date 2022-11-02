@@ -13,12 +13,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-
+<body style="background-color: rgb(166, 194, 203);"></body>
 <style>
+    
     /* general */
     body {
         margin-bottom: 100px;
-        background-image: url('https://www.incimages.com/uploaded_files/image/1920x1080/getty_615524918_379849.jpg');
         background-size: 99%
     }
 
@@ -36,7 +36,7 @@
     }
 
     .quoteTitle {
-        margin-left: 10px;
+        margin-left: 0px;
     }
 
     .center {
@@ -46,7 +46,7 @@
     }
 
     #quote {
-        margin-left: 10px;
+        margin-left: 0px;
         margin-bottom: 100px;
         margin-top: 5px;
         font-size: medium;
@@ -67,16 +67,16 @@
 
 <body>
 <!-- Quotes -->
-<div class="w3-container w3-teal">
+<div class="w3-container w3-BLACK">
     <h1 style="text-align: center">Inspirational Quotes</h1>
 </div>
 <div class="container p-3 my-3", style = "color: white">
-    <img src="https://tse1.mm.bing.net/th?id=OIP.LZRCBrW4MY9vxyMT0HW5YQHaEK&pid=Api" width="450px" height="450px" class="center">
+    <img src="../static/assets/motivation.png" alt="motivation" width="450px" height="450px" class="left">
     <div class="container p-3 my-3 bg-light text-white">
-        <a class="h2 quoteTitle" style="color: dodgerblue">{{ quotes['content']}}</a>
+        <a class="h2 quoteTitle" style="color: rgb(0, 0, 0)">{{quotes['content']}}</a>
 
     </div>
-    <a class = "button" id="buttonGetquote" href="/motivation/" style="text-align: center;  display: block; margin-left: auto; margin-right: auto;">New Quote</a>
+    <a class = "button" id="buttonGetquote" href="/motivation/" style="text-align: center; display: block; margin-left: auto; margin-left: auto;">New Quote</a>
 </div>
 </div>
 </body>
