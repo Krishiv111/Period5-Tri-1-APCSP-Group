@@ -1,23 +1,86 @@
-
 <!DOCTYPE html>
 <html lang="en">
+{% include "layouts/navbar.html" %}
+{% block background %}
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-    <title>JavaScript | fetch() Method</title>
+    <title>Inspiratonal Quotes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
+
+<style>
+    /* general */
+    body {
+        margin-bottom: 100px;
+        background-image: url('https://www.incimages.com/uploaded_files/image/1920x1080/getty_615524918_379849.jpg');
+        background-size: 99%
+    }
+
+    .APIContainer {
+        margin: 50px auto 150px auto;
+        padding: 100px 100px 100px 100px;
+        width: 40%;
+        min-width: 500px;
+        height: 20%;
+    }
+
+    .quoteContainer {
+        display: flex;
+        align-items: center;
+    }
+
+    .quoteTitle {
+        margin-left: 10px;
+    }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #quote {
+        margin-left: 10px;
+        margin-bottom: 100px;
+        margin-top: 5px;
+        font-size: medium;
+        color: white;
+    }
+
+    #buttonGetquote {
+        background-color: dodgerblue;
+        padding: 1em 1.5em;
+        transition: background-color .5s;
+        color: black;
+        display: inline-block;
+        margin-left: auto;
+        bottom: 100px;
+    }
+
+</style>
+
 <body>
-    <script>
-        // API for get requests
-        let fetchRes = fetch(
-"https://motivational-quotes1.p.rapidapi.com/motivation");
-        // fetchRes is the promise to resolve
-        // it by using.then() method
-        fetchRes.then(res =>
-            res.json()).then(d => {
-                console.log(d)
-            })
-    </script>
+<!-- Quotes -->
+<div class="w3-container w3-teal">
+    <h1 style="text-align: center">Inspirational Quotes</h1>
+</div>
+<div class="container p-3 my-3", style = "color: white">
+    <img src="https://tse1.mm.bing.net/th?id=OIP.LZRCBrW4MY9vxyMT0HW5YQHaEK&pid=Api" width="450px" height="450px" class="center">
+    <div class="container p-3 my-3 bg-light text-white">
+        <a class="h2 quoteTitle" style="color: dodgerblue">{{ quotes['content']}}</a>
+
+    </div>
+    <a class = "button" id="buttonGetquote" href="/motivation/" style="text-align: center;  display: block; margin-left: auto; margin-right: auto;">New Quote</a>
+</div>
+</div>
 </body>
+
+{% endblock %}
+
 </html>

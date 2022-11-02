@@ -1,3 +1,4 @@
+import requests, json
 # import "packages" from flask
 from flask import render_template  # import render_template from "public" flask libraries
 # import "packages" from "this" project
@@ -36,7 +37,21 @@ def fitnessgoals():
 
 @app.route('/motivation/')  # connects /stub/ URL to stub() function
 def motivation():
-    return render_template("motivation.html")
+
+    url = "https://quotes15.p.rapidapi.com/quotes/random/"
+
+    headers = {
+        "X-RapidAPI-Key": "825200d0f8msh414d353da41bfcfp1ddcfcjsnb40ef386fce9",
+        "X-RapidAPI-Host": "quotes15.p.rapidapi.com"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+
+    print(response.text)
+    output = json.loads(response.text)
+    return render_template("motivation.html", quotes = output)
+
+
 
 # this runs the application on the development server
 if __name__ == "__main__":
