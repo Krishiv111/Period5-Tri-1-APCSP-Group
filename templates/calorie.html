@@ -8,32 +8,37 @@
 {% block body %}
     <!- Try building a new body here, bootstrap is a wise choice ->
     <div class="px-5 py-5 mx-auto">
-        <h1 class="text-primary"><strong>Calorie Calculator</strong></h1>
+        <h1 class="text-primary"><strong>Calorie Counter</strong></h1>
         
         
     <html>
+    <body>
         <label for="goal">Calorie Goal:</label>
         <br>
         <input type="text" id="goal">
         <br>        
         <button type="submit" onclick="myfunc()" id="test">Submit</button>
-    </html>
+
         <script type="text/javascript">
             function myfunc() {
                 var goal = document.getElementById('goal').value;
-
-                document.write("Progress on Calorie Goal: / " + goal + " Calories" + "<br>");
-                document.write("Add Calories:" + "<br>");
-                var new = document.createElement("new");
-                input.setAttribute("type", "text");
-                document.body.appendChild(new);
-                document.write("Ur new is " + new)
+                document.write("Progress on Calorie Goal: ".fontsize(20) + " 0 ".fontsize(20) + " / ".fontsize(20) + goal.fontsize(20) + "<br>");
                 let btn = document.createElement("button");
                 btn.innerHTML = "Add";
+                var cal = 0
+                btn.addEventListener("click", function () {
+                    var inc = prompt("How Many Calories Do you want to add? ");
+                var cal = cal + inc
+                document.write("Progress on Calorie Goal: ".fontsize(20) + cal.fontsize(20) + " / ".fontsize(20) + goal.fontsize(20) + "<br>");
+                    
+                });
                 document.body.appendChild(btn);
+                    
+
             }
         </script>
-
+    <body>
+    </html>
     
         
 {% endblock %}
