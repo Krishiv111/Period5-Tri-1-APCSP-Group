@@ -1,13 +1,8 @@
 import random, requests, json
 
-url = "https://quotes15.p.rapidapi.com/quotes/random/"
+url = "https://quotsy.p.rapidapi.com/author/dalai%20lama/page/2/index.json"
 
-headers = {
-        "X-RapidAPI-Key": "825200d0f8msh414d353da41bfcfp1ddcfcjsnb40ef386fce9",
-        "X-RapidAPI-Host": "quotes15.p.rapidapi.com"
-}
-
-response = requests.request("GET", url, headers=headers)
+response = requests.request("GET", url)
 output = json.loads(response.text)
 print(response.text)
 
