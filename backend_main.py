@@ -1,17 +1,48 @@
-import requests
+import random, requests, json
 
-url = "https://motivational-quotes1.p.rapidapi.com/motivation"
+url = "https://quotsy.p.rapidapi.com/author/dalai%20lama/page/2/index.json"
 
-payload = {
-	"key1": "value",
-	"key2": "value"
-}
-headers = {
-	"content-type": "application/json",
-	"X-RapidAPI-Key": "825200d0f8msh414d353da41bfcfp1ddcfcjsnb40ef386fce9",
-	"X-RapidAPI-Host": "motivational-quotes1.p.rapidapi.com"
-}
+response = requests.request("GET", url)
+output = json.loads(response.text)
+print(response.text)
 
-response = requests.request("POST", url, json=payload, headers=headers)
-random_quote = response.text
-print(random_quote)
+team_db = []
+team_names = []
+team_roles = []
+
+team_db.append({
+	"Name": "Dhruva",
+	"Role": "Backend Developer"
+})
+
+team_db.append({
+	"Name": "Krishiv",
+	"Role": "Scrum Master"
+})
+
+team_db.append({
+	"Name": "Prasith",
+	"Role": "Frontend Developer"
+})
+
+team_db.append({
+	"Name": "Advay",
+	"Role": "Frontend Developer"
+})
+
+team_db.append({
+	"Name": "Shivansh",
+	"Role": "Dev Ops"
+})
+
+for person in team_db:
+	name = person["Name"]
+	role = person["Role"]
+	team_names.append(name)
+	team_roles.append(role)
+
+def getRandomTeamMember():
+    return(random.choice(team_db))
+
+
+#print(random_team_member)

@@ -38,14 +38,9 @@ def fitnessgoals():
 @app.route('/motivation/')  # connects /stub/ URL to stub() function
 def motivation():
 
-    url = "https://quotes15.p.rapidapi.com/quotes/random/"
+    url = "http://api.quotable.io/random"
 
-    headers = {
-        "X-RapidAPI-Key": "825200d0f8msh414d353da41bfcfp1ddcfcjsnb40ef386fce9",
-        "X-RapidAPI-Host": "quotes15.p.rapidapi.com"
-    }
-
-    response = requests.request("GET", url, headers=headers)
+    response = requests.request("GET", url)
 
     print(response.text)
     output = json.loads(response.text)
