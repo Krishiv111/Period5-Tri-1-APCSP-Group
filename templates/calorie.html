@@ -20,7 +20,7 @@
             const total_cal = 0
             function myfunc() {
                 var goal = document.getElementById('goal').value;
-                document.write("Progress on Calorie Goal:");
+                document.write("Progress on Calorie Goal: ".fontsize(20) + " 0 ".fontsize(20) + " / ".fontsize(20) + goal.fontsize(20) + "<br>");
                 let btn = document.createElement("button");
                 btn.innerHTML = "Add";
                 var cal = 0
@@ -30,12 +30,10 @@
                     const sum = total_cal + inc; 
                     var sum_text = sum.toString();
 
-                document.write("Progress on Calorie Goal: ".fontsize(20) + sum_text.fontsize(20) + " / ".fontsize(20) + goal.fontsize(20) + "<br>");
+                document.write("Progress on Calorie Goal: ".fontsize(20) + sum_text.fontsize(20) + " / ".fontsize(20) + goal.fontsize(20)  +"<br>");
                     
                 });
                 document.body.appendChild(btn);
-                    
-
             }
         </script>
     <body>
