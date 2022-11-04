@@ -13,21 +13,42 @@
         <p> <img src="../static/assets/fitnessgoals.webp" alt="fitnessgoals" style="float:right;width:700px;height:500px;"></p>
         <html>
         <body>
+<form> 
+    <label for="Name">What is your Name?</label> </label> <input type="text" id="name">
+    <br>
+    <br>
+    <h for="weight">What is your current weight(lb)? </h><input type="text" id="weight">
+    <br> 
+    <br>
+    <label for="height">What is your current Height(in)? </label> <input type="text" id="height"> 
+    <br>
+    <br>
+    <label for="change">Do you want to gain or lose weight? </label> <input type="text" id="change"> 
+<button type="submit" onclick="myfunc()" id="check">Submit</button>
+</form>
+<script>
+const form = document.querySelector('form');
+form.addEventListener('submit', (e) =>{
+    e.preventDefault();
+    const fd = new FormData(form);
+    const obj = Object.fromEntries(fd);
+    const json = JSON.stringify(obj);
+    localStorage.setItem('form', json);
 
-            <label for="Name">What is your Name?</label> </label> <input type="text" id="name">
-            <br>
-            <br>
-            <h for="weight">What is your current weight(lb)? </h><input type="text" id="weight">
-            <br> 
-            <br>
-            <label for="height">What is your current Height(in)? </label> <input type="text" id="height"> 
-            <br>
-            <br>
-            <label for="change">Do you want to gain or lose weight? </label> <input type="text" id="change"> 
-        <button type="submit" onclick="myfunc()" id="check">Submit</button>
+    window.location.href = "data"
+})
+
+window.localStorage.setItem('name', 'Advay Shindikar');
+window.localStorage.setItem('name', 'Shivansh Goel');
+window.localStorage.setItem('name', 'Dhruva Iyer');
+window.localStorage.setItem('name', 'Prasith Chilla');
+window.localStorage.setItem('name', 'Krishiv Mahendru');
+
+window.localStorage.setItem('user', JSON.stringify(person));
+    </script>
+           
             
             <script type="text/javascript">
-                
             function myfunc() {
         
                 var change = document.getElementById('change').value;
@@ -35,18 +56,18 @@
                 if (change == "gain") {
                     document.write("Tips for Gaining Weight: ".fontsize(50) + "<br>")
                     document.write("-".fontsize(6) + "Eat Healthy foods in bigger portions (remember it is important to gain with clean calories as junk food can cause you many diseases.".fontsize(6) + "<br>")
-                    document.write("-".fontsize(6) + "Choose nutrient-rich foods and make sure to contain the correct amount of protien,fats,dairy into your diet".fontsize(6) + "<br>")
-                    document.write("-".fontsize(6) + "Try smoothies and shakes with higher protien as it helps with the growth of muscules mass which will increase your weight".fontsize(6) + "<br>")
+                    document.write("-".fontsize(6) + "Choose nutrient-rich foods and make sure to contain the correct amount of protein,fats,dairy into your diet".fontsize(6) + "<br>")
+                    document.write("-".fontsize(6) + "Try smoothies and shakes with higher protein as it helps with the growth of muscules mass which will increase your weight".fontsize(6) + "<br>")
                     document.write("-".fontsize(6) + "Go on a calorie surplus eating more calories than you burn".fontsize(6) + "<br>")
                     document.write("-".fontsize(6) + "Exercise Certain Muscle Groups".fontsize(6) + "<br>")
                     document.write("-".fontsize(6) + "Track Your Calories (Use our calorie counter!)".fontsize(6) + "<br>")
                 } else if (change == "lose") {
                     document.write("Tips for Losing Weight: ".fontsize(50) + "<br>")
                     document.write("-".fontsize(6) + "If you eat healthy and clean, it will keep one healthy and strong.".fontsize(6) + "<br>")
-                    document.write("-".fontsize(6) + "Exersice for at least 1 hr per day, areboic and cardiovascular exersices are proven best for weight loss".fontsize(6) + "<br>")
-                    document.write("-".fontsize(6) + "Make sure to drink at least 8 cups of water per day which will nelp you stay hydrated but also flush off that extra weight".fontsize(6) + "<br>")
-                    document.write("-".fontsize(6) + "Eat high fibre foods as they are known to benfit you for a more sustanible weight loss journey".fontsize(6) + "<br>")
-                    document.write("-".fontsize(6) + "Keep away from junk food,eating it once in a blue moon wont hurt but staying consistent on it will have a major setback on your goals, we reccomend to clean out your pantries and use all that extra junk food and donate it to people in need as you need to focus on your progress".fontsize(6) + "<br>")
+                    document.write("-".fontsize(6) + "Exersice for at least 1 hr per day, aerobic and cardiovascular exersices are proven best for weight loss".fontsize(6) + "<br>")
+                    document.write("-".fontsize(6) + "Make sure to drink at least 8 cups of water per day which will help you stay hydrated but also flush off that extra weight".fontsize(6) + "<br>")
+                    document.write("-".fontsize(6) + "Eat high fibre foods as they are known to benefit you for a more sustainable weight loss journey".fontsize(6) + "<br>")
+                    document.write("-".fontsize(6) + "Keep away from junk food,eating it once in a blue moon wont hurt but staying consistent on it will have a major setback on your goals, we recommend to clean out your pantries and use all that extra junk food and donate it to people in need as you need to focus on your progress".fontsize(6) + "<br>")
                     document.write("-".fontsize(6) + "Track and Plan your meals, this will promote a way for you to know what you are eating and how much you are eating as portion size and specific food determine how much weight you can loose over periods of time.".fontsize(6) + "<br>")
 
                 } else {
