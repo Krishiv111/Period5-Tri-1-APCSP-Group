@@ -28,13 +28,23 @@
 </form>
 <script>
 const form = document.querySelector('form');
+form.addEventListener('submit', (e) =>{
     e.preventDefault();
     const fd = new FormData(form);
-    console.log (fd);
+    const obj = Object.fromEntries(fd);
+    const json = JSON.stringify(obj);
+    localStorage.setItem('form', json);
 
-    for (item of fd)(
-        console.log(item);
-    )
+    window.location.href = "data"
+})
+
+window.localStorage.setItem('name', 'Advay Shindikar');
+window.localStorage.setItem('name', 'Shivansh Goel');
+window.localStorage.setItem('name', 'Dhruva Iyer');
+window.localStorage.setItem('name', 'Prasith Chilla');
+window.localStorage.setItem('name', 'Krishiv Mahendru');
+
+window.localStorage.setItem('user', JSON.stringify(person));
     </script>
            
             
